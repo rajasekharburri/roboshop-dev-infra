@@ -22,3 +22,14 @@ frontend-alb.daws86s.fun -> ALB DNS
 a accepting from b -> ingress rule of a should allow sg id attached to b
 
 b accepting from a -> ingress rule of b should allow sg id attached to a
+
+
+
+
+#!/bin/bash
+dnf install nginx -y
+systemctl start nginx
+systemctl enable nginx
+rm -rf /usr/share/html/index.html
+echo "<h1>Hi i am from server-1<h1">
+<usr/share/nginx/html/index.html
